@@ -11,6 +11,8 @@ body {
 
 input {
   font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  cursor: pointer;
+  margin: 0;
 }
 
 a {
@@ -19,7 +21,9 @@ a {
   color: #0070c0;
 }
 
-a:hover {
+a:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
   opacity: 0.6;
   filter: alpha(opacity=60); 
 }
@@ -86,7 +90,9 @@ a:active {
 /*indexの構成要素-------*/
 
 #index .containner > .main > .catch{
-  box-sizing: border-box;
+  -webkit-box-sizing : border-box ;
+  -moz-box-sizing : border-box ;
+  box-sizing : border-box ;
   width: 50%;
   padding-right: 20px;
   margin-bottom: 20px;
@@ -94,7 +100,9 @@ a:active {
 }
 
 #index .containner > .main > .search{
-  box-sizing: border-box;
+  -webkit-box-sizing : border-box ;
+  -moz-box-sizing : border-box ;
+  box-sizing : border-box ;
   width: 50%;
   padding: 30px 30px 0;
   margin-bottom: 20px;
@@ -150,7 +158,9 @@ a:active {
 }
 
 #index .containner > .main > .search .freeword [type="text"]{
-  box-sizing: border-box;
+  -webkit-box-sizing : border-box ;
+  -moz-box-sizing : border-box ;
+  box-sizing : border-box ;
   border: none;
   padding: 10px 3.5em 10px 10px;
 /*  margin-bottom: 10px;*/
@@ -158,20 +168,20 @@ a:active {
   font-weight: bold;
   color: #444;
   width: 100%;
-  border-radius: 0.2em;
+  border-radius: 4px;
 }
 
 #index .containner > .main > .search .freeword [type="submit"]{
   position: absolute;
-  right: 11px;
+  right: 15px;
   top: 15px;
   border: none;
   background-color: #777;
   color: #fff;
   padding: 10px;
   font-size: 1.1em;
-  border-top-right-radius: 0.2em;
-  border-bottom-right-radius: 0.2em;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
 #index .containner > .main > .search .tagcloud{
@@ -190,6 +200,8 @@ a:active {
   background-color: #444;
   color: #fff;
   border-radius: 5px;
+  border-bottom: 1px #222 solid;
+  text-decoration: none;
 }
 
 #index .containner > .main > .search .tagcloud > li a.lank1{
