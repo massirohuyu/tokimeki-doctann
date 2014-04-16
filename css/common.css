@@ -37,6 +37,7 @@ a:active {
 /*ページ共通の構成要素-------*/
 .containner {
   background-color: #fff;
+  overflow: hidden;
 }
 
 .containner .header {
@@ -182,6 +183,7 @@ a:active {
   font-size: 1.1em;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
+  -webkit-appearance: none;
 }
 
 #index .containner > .main > .search .tagcloud{
