@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ときめきDocTann</title>
+    <title>検索結果一覧 - ときめきDocTann</title>
     <link rel="stylesheet" href="./css/html5reset-1.6.1.css" type='text/css' media='all'>
     <link rel="stylesheet" href="./css/common.css" type='text/css' media='all'>
     <script src="./js/respond.min.js"></script>
@@ -14,53 +14,87 @@
     <meta name="description" content="「ときめきDocTann」は社内の情報・ファイル共有サービスです。">
     <meta name="keywords" content="ときめきDocTann, 情報, ファイル, 共有, 社内">
   </head>
-  <body id="index">
+  <body id="search-list">
     <div class="containner" id="page-top">
       <header class="header">
-        <p class="title">ときめきDocTann</p>
+        <h1 class="title">ときめきDocTann</>
 <!--        ここは小さいロゴにする。-->
       </header>
-      <div class="main clearfix">
-        <div class="catch">
-          <hgroup>
-            <h1><img src="./images/catch.png" alt="ときめきDoctann" width="100%"></h1>
-            <h2>ここにキャッチコピー。</h2>
-          </hgroup>
-          <p>ここにキャッチコピーの説明。ここにキャッチコピーの説明。ここにキャッチコピーの説明。</p>
-        </div><!--/catch-->
-        <div class="search">
-          <article class="module">
-            <hgroup>
+      <div class="main">
+        <ul class="breadcrumb">
+          <li><a href="/">トップ</a></li>
+          <li class="current">検索結果一覧</li>
+        </ul>
+        <div class="side-column">
+          さいどカラム
+        </div><!--/side-column-->
+        <div class="main-column">
+          <h1 class="title">検索結果一覧</h1>
+          <div class="search">
+            <article class="module">
               <h2>フリーワード入力</h2>
-              <h3>閲覧したいファイル名や欲しい情報に関わる単語を入力してください。</h3>
-            </hgroup>
-            <form method="get" action="freeword.html" class="freeword">
-              <input type="text" value="" name="word" placeholder="ファイル名・単語を入力">
-              <input type="submit" value="検索">
-            </form>
-          </article>
-          <article class="module">
-            <hgroup>
+              <form method="get" action="freeword.html" class="freeword">
+                <input type="text" value="" name="word" placeholder="ファイル名・単語を入力">
+                <input type="submit" value="検索">
+              </form>
+            </article>
+            <article class="module tags-selected">
+              <h2>選択タグ</h2>
+              <ul class="tagcloud">
+                <li><a href="tagcloud.html">ねこ</a></li>
+                <li><a href="tagcloud.html">ときめきDocTann</a></li>
+              </ul>
+              <a href="javascript:void(0);" class="opcl-tagcloud">▼ タグを選択する</a>
+            </article>
+            <article class="module hidden" id="tagcloud">
               <h2>タグクラウド</h2>
-              <h3>欲しい情報に関連するタグを選択してください。</h3>
-            </hgroup>
-            <ul class="tagcloud">
-              <li><a href="tagcloud.html" class="lank1">HTML5</a></li>
-              <li><a href="tagcloud.html" class="lank2">CSS3</a></li>
-              <li><a href="tagcloud.html" class="lank2">ねこ</a></li>
-              <li><a href="tagcloud.html" class="lank4">ときめきDocTann</a></li>
-              <li><a href="tagcloud.html" class="lank3">Ruby</a></li>
-              <li><a href="tagcloud.html" class="lank1">島田塾</a></li>
-              <li><a href="tagcloud.html" class="lank1">HTML5</a></li>
-              <li><a href="tagcloud.html" class="lank2">CSS3</a></li>
-              <li><a href="tagcloud.html" class="lank2">ねこ</a></li>
-              <li><a href="tagcloud.html" class="lank4">DocTann</a></li>
-              <li><a href="tagcloud.html" class="lank3">Ruby</a></li>
-              <li><a href="tagcloud.html" class="lank1">島田塾</a></li>
-            </ul>
-            <p class="tagcloud-all-btn"><a href="tagcloud-all.html">→ すべてのタグを表示する</a></p>
-          </article>
-        </div><!--/search-->
+              <ul class="tagcloud">
+                <li><a href="tagcloud.html" class="lank1">HTML5</a></li>
+                <li><a href="tagcloud.html" class="lank2">CSS3</a></li>
+                <li><a href="tagcloud.html" class="lank2">ねこ</a></li>
+                <li><a href="tagcloud.html" class="lank4">ときめきDocTann</a></li>
+                <li><a href="tagcloud.html" class="lank3">Ruby</a></li>
+                <li><a href="tagcloud.html" class="lank1">島田塾</a></li>
+                <li><a href="tagcloud.html" class="lank1">HTML5</a></li>
+                <li><a href="tagcloud.html" class="lank2">CSS3</a></li>
+                <li><a href="tagcloud.html" class="lank2">ねこ</a></li>
+                <li><a href="tagcloud.html" class="lank4">DocTann</a></li>
+                <li><a href="tagcloud.html" class="lank3">Ruby</a></li>
+                <li><a href="tagcloud.html" class="lank1">島田塾</a></li>
+              </ul>
+            </article>
+          </div><!--/search-->
+          <article class="result-box">
+            <ol class="list">
+              <li>
+                <h2 class="title">Rubyアプリ開発ノート.doc</h2>
+                <p class="update">更新：2014/04/05</p>
+                <p class="content">Rubyアプリ開発ノート　アプリ開発案　1.楽しい開発を行う　2.仲良く開発を行う　3.いろいろ学ぶ</p>
+                <ul class="tags">
+                  <li><a href="tagcloud.html">しまだ塾</a></li>
+                  <li><a href="tagcloud.html">Ruby</a></li>
+                </ul>
+                <div class="actions">
+                  <a href="javascript:void(0);" class="open-btn">場所を開く</a>
+                  <a href="javascript:void(0);" class="dl-btn">ダウンロード</a>
+                </div>
+              </li>
+              <li>
+                <h2 class="title">Rubyアプリ開発ノート.doc</h2>
+                <p class="update">更新：2014/04/05</p>
+                <p class="content">Rubyアプリ開発ノート　アプリ開発案　1.楽しい開発を行う　2.仲良く開発を行う　3.いろいろ学ぶ</p>
+                <ul class="tags">
+                  <li><a href="tagcloud.html">しまだ塾</a></li>
+                  <li><a href="tagcloud.html">Ruby</a></li>
+                </ul>
+                <div class="actions">
+                  <a href="javascript:void(0);" class="open-btn">場所を開く</a>
+                  <a href="javascript:void(0);" class="dl-btn">ダウンロード</a>
+                </div>
+              </li>
+            </ol>
+          </article><!--/resultbox-->
+        </div><!--/main-column-->
       </div><!--/main-->
       <footer class="footer">
         <p class="copyright">© Copyright 島田塾</p>
