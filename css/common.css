@@ -59,6 +59,7 @@ a:active {
   margin: 0 auto;
   padding: 20px;
   max-width: 960px;
+  overflow: hidden;
 }
 
 .containner .footer {
@@ -90,15 +91,31 @@ a:active {
 }
 
 .containner > .main > .main-column {
-  margin-right: 200px;
+  float: left;
+  max-width: 780px;
+  width: 80%;
 }
 
 .containner > .main > .side-column {
-  float: right;
-  width: 180px;
+  -webkit-box-sizing : border-box ;
+  -moz-box-sizing : border-box ;
+  box-sizing : border-box ;
+  float: left;
+  max-width: 180px;
+  padding-left: 20px;
+  width: 20%;
 }
 
-.containner > .main > .main-column > .title {
+@media screen and (max-width:768px){ /*タブレット、スマホ用*/
+  .containner > .main > .main-column,
+  .containner > .main > .side-column {
+   float: none;
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.containner > .main > .title {
   font-size: 1.5em;
   margin-bottom: 15px;
   /* border-left: 10px #555 solid; */
@@ -227,6 +244,11 @@ a:active {
   border-bottom: none;
 }
 
+.containner .main .tags-selected .tagcloud > li a {
+  font-size: 0.8em;
+  line-height: 1.1em;
+}
+
 .containner .main .tagcloud > li a.lank1{
   font-size: 1.4em;
   line-height: 1.5em;
@@ -333,6 +355,98 @@ a:active {
   }
 }
 
+/*search-listの構成要素----*/
+
+#search-list .containner > .main .result-box > .list {
+  list-style: none;
+}
+
+#search-list .containner > .main  .result-box > .list > li {
+  position: relative;
+  background-color: #f5f5f5;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  border: 3px #ddd solid;
+}
+
+#search-list .containner > .main  .result-box > .list > li > .title {
+  font-size: 1.2em;
+  padding-right: 13em;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px dotted #ccc;
+}
+
+#search-list .containner > .main  .result-box > .list > li > .title:before {
+  content: "★";
+  display: inline-block;
+  padding-right: 5px;
+  font-size: 1.4em;
+  color: #000;
+}
+
+#search-list .containner > .main  .result-box > .list > li > .update {
+  float: right;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+
+#search-list .containner > .main  .result-box > .list > li > .content {
+  font-size: 0.9em;
+  background-color: #fff;
+  border: 1px #e5e5e5 solid;
+  color: #666;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#search-list .containner > .main  .result-box > .list > li > .tagcloud a {
+  font-size: 0.8em;
+  line-height: 1em;
+  background-color: #888;
+  border-bottom-color: #777;
+  border-radius: 3px;
+}
+
+#search-list .containner > .main  .result-box > .list > li > .actions {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px 10px 0 0;
+}
+
+#search-list .containner > .main  .result-box > .list > li > .actions a {
+  background-color: #555;
+  border-bottom: #333 1px solid;
+  border-radius: 3px;
+  display: inline-block;
+  color: #fff;
+  font-weight: bold;
+  padding: 3px 15px;
+  text-decoration: none;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width:768px){ /*タブレット、スマホ用*/
+  #search-list .containner > .main  .result-box > .list > li > .title {
+    padding-right: 0;
+  }
+  
+  #search-list .containner > .main  .result-box > .list > li > .actions {
+    position: static;
+  }
+  
+  #search-list .containner > .main  .result-box > .list > li > .update {
+    float: none;
+  }
+}
+
 /*共通に使用するclass-------*/
 .clearfix:after {
   content: "";
@@ -344,4 +458,8 @@ a:active {
   position: absolute !important;
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px,1px,1px,1px);
+}
+
+.hidden {
+  display: none !important;
 }

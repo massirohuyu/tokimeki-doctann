@@ -13,6 +13,7 @@
     <![endif]-->
     <meta name="description" content="「ときめきDocTann」は社内の情報・ファイル共有サービスです。">
     <meta name="keywords" content="ときめきDocTann, 情報, ファイル, 共有, 社内">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
   </head>
   <body id="search-list">
     <div class="containner" id="page-top">
@@ -25,11 +26,8 @@
           <li><a href="/">トップ</a></li>
           <li class="current">検索結果一覧</li>
         </ul>
-        <div class="side-column">
-          さいどカラム
-        </div><!--/side-column-->
+        <h1 class="title">検索結果一覧</h1>
         <div class="main-column">
-          <h1 class="title">検索結果一覧</h1>
           <div class="search">
             <article class="module">
               <h2>フリーワード入力</h2>
@@ -68,38 +66,62 @@
             <ol class="list">
               <li>
                 <h2 class="title">Rubyアプリ開発ノート.doc</h2>
+                <div class="actions">
+                  <a href="javascript:void(0);" class="open-btn">→ 場所を開く</a>
+                  <a href="javascript:void(0);" class="dl-btn">→ ダウンロード</a>
+                </div>
                 <p class="update">更新：2014/04/05</p>
-                <p class="content">Rubyアプリ開発ノート　アプリ開発案　1.楽しい開発を行う　2.仲良く開発を行う　3.いろいろ学ぶ</p>
-                <ul class="tags">
+                <ul class="tagcloud">
                   <li><a href="tagcloud.html">しまだ塾</a></li>
                   <li><a href="tagcloud.html">Ruby</a></li>
                 </ul>
-                <div class="actions">
-                  <a href="javascript:void(0);" class="open-btn">場所を開く</a>
-                  <a href="javascript:void(0);" class="dl-btn">ダウンロード</a>
-                </div>
+                <p class="content">Rubyアプリ開発ノート　アプリ開発案　1.楽しい開発を行う　2.仲良く開発を行う　3.いろいろ学…</p>
               </li>
               <li>
                 <h2 class="title">Rubyアプリ開発ノート.doc</h2>
+                <div class="actions">
+                  <a href="javascript:void(0);" class="open-btn">→ 場所を開く</a>
+                  <a href="javascript:void(0);" class="dl-btn">→ ダウンロード</a>
+                </div>
                 <p class="update">更新：2014/04/05</p>
-                <p class="content">Rubyアプリ開発ノート　アプリ開発案　1.楽しい開発を行う　2.仲良く開発を行う　3.いろいろ学ぶ</p>
-                <ul class="tags">
+                <ul class="tagcloud">
                   <li><a href="tagcloud.html">しまだ塾</a></li>
                   <li><a href="tagcloud.html">Ruby</a></li>
                 </ul>
+                <p class="content">Rubyアプリ開発ノート　アプリ開発案　1.楽しい開発を行う　2.仲良く開発を行う　3.いろいろ学…</p>
+              </li>
+              <li>
+                <h2 class="title">Rubyアプリ開発ノート.doc</h2>
                 <div class="actions">
-                  <a href="javascript:void(0);" class="open-btn">場所を開く</a>
-                  <a href="javascript:void(0);" class="dl-btn">ダウンロード</a>
+                  <a href="javascript:void(0);" class="open-btn">→ 場所を開く</a>
+                  <a href="javascript:void(0);" class="dl-btn">→ ダウンロード</a>
                 </div>
+                <p class="update">更新：2014/04/05</p>
+                <ul class="tagcloud">
+                  <li><a href="tagcloud.html">しまだ塾</a></li>
+                  <li><a href="tagcloud.html">Ruby</a></li>
+                </ul>
+                <p class="content">Rubyアプリ開発ノート　アプリ開発案　1.楽しい開発を行う　2.仲良く開発を行う　3.いろいろ学…</p>
               </li>
             </ol>
           </article><!--/resultbox-->
         </div><!--/main-column-->
+        <div class="side-column">
+          さいどカラム<br>（ここに何置いたらいいでしょうか…）
+        </div><!--/side-column-->
       </div><!--/main-->
       <footer class="footer">
-        <p class="copyright">© Copyright 島田塾</p>
+        <p class="copyright">© Copyright しまだ塾</p>
       </footer>
       <div class="page-top-btn"><a href="#page-top">ページ上部へ</a></div>
     </div><!--/containner-->
+    <script type="text/javascript">
+      (function(){
+        var $opclBtns = $('.opcl-tagcloud');
+        $opclBtns.on('click', function(){
+          $('#tagcloud').toggleClass('hidden');
+        });
+      })();
+    </script>
   </body>
 </html>
