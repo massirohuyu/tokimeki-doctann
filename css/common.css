@@ -433,6 +433,59 @@ a:active {
   margin-bottom: 15px;
 }
 
+#search-list .containner > .main  .result-line {
+  border-bottom: #aaa dashed 1px;
+  overflow: hidden;
+  margin-bottom: 15px;
+  line-height: 2.2em;
+}
+
+#search-list .containner > .main  .result-line > .hits {
+  float: left;
+  font-weight: bold;
+}
+
+#search-list .containner > .main  .result-line > .hits .value {
+  font-size: 1.8em;
+  padding-left: 5px;
+}
+
+#search-list .containner > .main  .result-line > .display-num,
+#search-list .containner > .main  .result-line > .order {
+  float: right;
+}
+
+#search-list .containner > .main  .paging {
+  margin-bottom: 15px;
+  overflow: hidden;
+  font-size: 1.2em;
+}
+
+#search-list .containner > .main  .paging > .prev {
+  float: left;
+}
+
+#search-list .containner > .main  .paging > .next {
+  float: right;
+}
+
+#search-list .containner > .main  .paging > .prev a {
+  
+}
+
+#search-list .containner > .main  .paging > .next a {
+  
+}
+
+#search-list .containner > .main  .paging > .pages {
+  text-align: center
+}
+
+#search-list .containner > .main  .paging > .pages .active {
+  font-weight:  bold;
+}
+
+
 @media screen and (max-width:768px){ /*タブレット、スマホ用*/
   #search-list .containner > .main  .result-box > .list > li > .title {
     padding-right: 0;
