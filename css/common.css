@@ -54,6 +54,10 @@ a:active {
   line-height: 30px;
   color: #fff;
 }
+.containner .header > .title a {
+  color: #fff;
+  text-decoration: none;
+}
 
 .containner > .main {
   margin: 0 auto;
@@ -164,18 +168,21 @@ a:active {
   box-sizing : border-box ;
   padding: 15px 15px 1px;
   margin-bottom: 20px;
-  background-color: #efefef;
+  /*background-color: #efefef;*/
+  background-color: #888;
   color: #444;
   border-radius: 0.4em;
 }
 
 .containner .main .search .module{
   margin-bottom: 15px;
+  overflow: hidden;
 }
 
 .containner .main .search .module h2{
-  font-size: 1em;
-  color: #666;
+  font-size: .8em;
+  line-height: 1.2em;
+  color: #fff;
   margin-bottom: 3px;
 }
 
@@ -188,9 +195,9 @@ a:active {
 .containner .main .search .freeword{
   position: relative;
   text-align: right;
-  background-color: #333;
-  padding: 15px;
-  margin: 10px 0;
+  background-color: #555;
+  padding: 8px;
+  margin: 5px 0;
   border-radius: 0.4em;
 }
 
@@ -199,25 +206,27 @@ a:active {
   -moz-box-sizing : border-box ;
   box-sizing : border-box ;
   border: none;
-  padding: 10px 3.5em 10px 10px;
-  font-size: 1.1em;
+  padding: 5px 3.5em 5px 10px;
   font-weight: bold;
+  font-size: 1em;
   color: #444;
   width: 100%;
   border-radius: 4px;
+  border-top: #bbb 2px solid;
 }
 
 .containner .main .search .freeword [type="submit"]{
   position: absolute;
-  right: 15px;
-  top: 15px;
+  right: 8px;
+  top: 8px;
   border: none;
   background-color: #777;
   color: #fff;
-  padding: 10px;
-  font-size: 1.1em;
+  font-size: 1em;
+  padding: 5px 10px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
+  border-bottom: #444 2px solid;
   -webkit-appearance: none;
 }
 
@@ -227,7 +236,7 @@ a:active {
   vertical-align: bottom;
 }
 
-.containner .main .tagcloud > li a{
+.containner .main .tagcloud > li a {
   display: block;
   padding: 5px 10px;
   background-color: #444;
@@ -235,6 +244,11 @@ a:active {
   border-radius: 5px;
   border-bottom: 1px #222 solid;
   text-decoration: none;
+}
+
+.containner .main .tags-selected .tagcloud {
+  float: left;
+  margin-right: .5em;
 }
 
 .containner .main .tags-selected .tagcloud > li a,
@@ -247,6 +261,26 @@ a:active {
 .containner .main .tags-selected .tagcloud > li a {
   font-size: 0.8em;
   line-height: 1.1em;
+}
+
+.containner .main .tags-selected .opcl-tagcloud {
+  float: left;
+  display: block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  line-height: 1.1em;
+  background-color: #fff;
+  /*text-decoration: none;*/
+  border-top: 2px #fff solid;
+  color: #222;
+  /*border-bottom: 1px #999 solid;*/
+}
+
+#tagcloud {
+  background-color: #777;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .containner .main .tagcloud > li a.lank1{
@@ -297,7 +331,6 @@ a:active {
   width: 50%;
   padding: 30px 30px 0;
   margin-bottom: 20px;
-  background-color: #888;
   float: left;
   color: #222;
   border-radius: 0.4em;
@@ -326,6 +359,24 @@ a:active {
   font-size: 0.8em;
   font-weight: normal;
   line-height: 1.5em;
+}
+
+#index .containner .main .search .freeword{
+  background-color: #333;
+  padding: 15px;
+  margin: 10px 0;
+}
+
+#index .containner .main .search .freeword [type="text"]{
+  padding: 10px 3.5em 10px 10px;
+  font-size: 1.1em;
+}
+
+#index .containner .main .search .freeword [type="submit"]{
+  right: 15px;
+  top: 15px;
+  padding: 10px;
+  font-size: 1.1em;
 }
 
 #index .containner > .main > .search .tagcloud{
@@ -478,7 +529,7 @@ a:active {
 }
 
 #search-list .containner > .main  .paging > .pages {
-  text-align: center
+  text-align: center;
 }
 
 #search-list .containner > .main  .paging > .pages .active {
@@ -515,4 +566,9 @@ a:active {
 
 .hidden {
   display: none !important;
+}
+
+.small {
+  font-weight: normal;
+  font-size: 0.9em;
 }
