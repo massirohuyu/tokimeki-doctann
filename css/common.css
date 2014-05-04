@@ -17,7 +17,7 @@ input {
 
 a {
   opacity: 1;
-  filter: alpha(opacity=100); 
+  filter: alpha(opacity=100);
   color: #0070c0;
 }
 
@@ -25,13 +25,13 @@ a:hover,
 input[type="submit"]:hover,
 input[type="button"]:hover {
   opacity: 0.6;
-  filter: alpha(opacity=60); 
+  filter: alpha(opacity=60);
 }
 
 a:visited,
 a:active {
   opacity: 0.8;
-  filter: alpha(opacity=80); 
+  filter: alpha(opacity=80);
 }
 
 /*ページ共通の構成要素-------*/
@@ -392,15 +392,15 @@ a:active {
     width: 100%;
     padding: 15px 15px 0;
   }
-  
+
   #index .containner > .main > .search .module{
     margin-bottom: 20px;
   }
-  
+
   #index .containner > .main > .search .freeword [type="text"]{
     font-size: 0.9em;
   }
-  
+
   #index .containner > .main > .search .freeword [type="submit"]{
     font-size: 0.9em;
   }
@@ -521,11 +521,11 @@ a:active {
 }
 
 #search-list .containner > .main  .paging > .prev a {
-  
+
 }
 
 #search-list .containner > .main  .paging > .next a {
-  
+
 }
 
 #search-list .containner > .main  .paging > .pages {
@@ -541,11 +541,11 @@ a:active {
   #search-list .containner > .main  .result-box > .list > li > .title {
     padding-right: 0;
   }
-  
+
   #search-list .containner > .main  .result-box > .list > li > .actions {
     position: static;
   }
-  
+
   #search-list .containner > .main  .result-box > .list > li > .update {
     float: none;
   }

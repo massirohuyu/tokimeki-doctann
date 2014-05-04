@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ときめきDocTann</title>
-    <link rel="stylesheet" href="./css/html5reset-1.6.1.css" type='text/css' media='all'>
-    <link rel="stylesheet" href="./css/common.css" type='text/css' media='all'>
+    <link rel="stylesheet" href="./css/min.css" type='text/css' media='all'>
     <script src="./js/respond.min.js"></script>
     <!--[if lt IE 9]>
     <script src="./js/html5shiv.min.js" type="text/javascript"></script>
@@ -87,18 +86,18 @@
         //タグクラウドの開閉と文言変更
         var $tagcloudAllBtn = $('.tagcloud-all-btn');
         $tagcloudAllBtn.on('click', function(){
-          var $btn = $(this); 
-          
+          var $btn = $(this);
+
           if($btn.hasClass('opened')) {
             $btn.find('a').text('→ すべてのタグを表示する');
           } else {
             $btn.find('a').text('→ 非表示にする');
           }
-          
+
           $btn.toggleClass('opened');
           $('#tagcloud').toggleClass('hidden');
         });
-        
+
         //ページ上部にスムーススクロール
         var $scrollBtns = $('.page-top-btn').find('a');
         $scrollBtns.on('click', function(){
