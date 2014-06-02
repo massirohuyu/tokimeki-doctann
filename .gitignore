@@ -1,2 +1,5 @@
 node_modules
+nbproject
+design
+.sass-cache
 .DS_Store

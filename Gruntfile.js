@@ -2,11 +2,15 @@ module.exports = function(grunt) {
 	var pkg = grunt.file.readJSON('package.json');
 
   grunt.initConfig({
-    cssmin: {
-      compress: {
-        files: {
-          './css/min.css': ['./css/html5reset-1.6.1.css', './css/common.css']
-        }
+    sass: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: 'scss',
+          src: ['*.scss'],
+          dest: './css',
+          ext: '.css'
+        }]
       }
     },
     connect: {
@@ -17,12 +21,20 @@ module.exports = function(grunt) {
       }
     },
     watch: {
+      sass: {
+        files: ['./scss/*.scss'],
+        tasks: ['sass']
+      },
       css: {
         files: ['./css/*.css', '!./css/min.css'],
-        tasks: ['cssmin']
+        tasks: []
       },
       html: {
         files: ['./*.html'],
+        tasks: []
+      },
+      js: {
+        files: ['./js/*.js'],
         tasks: []
       },
       options: {
@@ -40,5 +52,5 @@ module.exports = function(grunt) {
     }
   }
 
-  grunt.registerTask('default', ['connect', 'cssmin', 'watch']);
+  grunt.registerTask('default', ['connect', 'sass', 'watch']);
 };

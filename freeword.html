@@ -14,6 +14,7 @@
     <meta name="description" content="「ときめきDocTann」は社内の情報・ファイル共有サービスです。">
     <meta name="keywords" content="ときめきDocTann, 情報, ファイル, 共有, 社内">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+    <script src="./js/search.js" type="text/javascript"></script>
   </head>
   <body id="search-list">
     <div class="containner" id="page-top">
@@ -26,7 +27,7 @@
           <li><a href="/">トップ</a></li>
           <li class="current">検索結果一覧</li>
         </ul>
-        <h1 class="title">検索結果一覧 <span class="small">：Ruby 開発</span></h1>
+        <h1 class="title">検索結果一覧 <span class="small">：<span class="search-words">Ruby 開発</span></span></h1>
         <div class="main-column">
           <div class="search">
             <article class="module">
@@ -45,18 +46,18 @@
             <article class="module hidden" id="tagcloud">
               <h2 class="assistive-text">タグクラウド</h2>
               <ul class="tagcloud">
-                <li><a href="tagcloud.html" class="lank1">HTML5</a></li>
-                <li><a href="tagcloud.html" class="lank2">CSS3</a></li>
-                <li><a href="tagcloud.html" class="lank2">ねこ</a></li>
-                <li><a href="tagcloud.html" class="lank4">ときめきDocTann</a></li>
-                <li><a href="tagcloud.html" class="lank3">Ruby</a></li>
-                <li><a href="tagcloud.html" class="lank1">しまだ塾</a></li>
-                <li><a href="tagcloud.html" class="lank1">HTML5</a></li>
-                <li><a href="tagcloud.html" class="lank2">CSS3</a></li>
-                <li><a href="tagcloud.html" class="lank2">ねこ</a></li>
-                <li><a href="tagcloud.html" class="lank4">DocTann</a></li>
-                <li><a href="tagcloud.html" class="lank3">OL</a></li>
-                <li><a href="tagcloud.html" class="lank1">しまだ塾</a></li>
+                <li><a href="tagcloud.html?tag=HTML5" class="lank1">HTML5</a></li>
+                <li><a href="tagcloud.html?tag=CSS3" class="lank2">CSS3</a></li>
+                <li><a href="tagcloud.html?tag=ねこ" class="lank2">ねこ</a></li>
+                <li><a href="tagcloud.html?tag=ときめきDocTann" class="lank4">ときめきDocTann</a></li>
+                <li><a href="tagcloud.html?tag=Ruby" class="lank3">Ruby</a></li>
+                <li><a href="tagcloud.html?tag=しまだ塾" class="lank1">しまだ塾</a></li>
+                <li><a href="tagcloud.html?tag=HTML5" class="lank1">HTML5</a></li>
+                <li><a href="tagcloud.html?tag=CSS3" class="lank2">CSS3</a></li>
+                <li><a href="tagcloud.html?tag=ねこ" class="lank2">ねこ</a></li>
+                <li><a href="tagcloud.html?tag=DocTann" class="lank4">DocTann</a></li>
+                <li><a href="tagcloud.html?tag=OL" class="lank3">OL</a></li>
+                <li><a href="tagcloud.html?tag=しまだ塾" class="lank1">しまだ塾</a></li>
               </ul>
             </article>
           </div><!--/search-->
@@ -96,19 +97,30 @@
           <article class="result-box">
             <ol class="list">
               <li>
-                <h2 class="title">Rubyアプリ開発ノート.doc</h2>
+                <h2 class="title">電子申請システムのまとめ.doc</h2>
                 <div class="actions">
                   <a href="./files/" class="open-btn">→ 場所を開く</a>
-                  <a href="./files/Rubyアプリ開発ノート.doc" class="dl-btn">→ ダウンロード</a>
+                  <a href="./files/dummy.doc" class="dl-btn">→ ダウンロード</a>
                 </div>
-                <p class="update">更新：2014/04/05</p>
+                <p class="update">更新：2014/05/29</p>
                 <ul class="tagcloud">
-                  <li><a href="tagcloud.html">しまだ塾</a></li>
-                  <li><a href="tagcloud.html">Ruby</a></li>
+                  <li><a href="tagcloud.html?tag=電子申請">電子申請</a></li>
                 </ul>
-                <p class="content">Rubyアプリ開発ノート　アプリ開発案　1.楽しい開発を行う　2.仲良く開発を行う　3.いろいろ学…</p>
+                <p class="content">電子申請システムのまとめ　その1.電子申請とはなにか　その2.電子申請と<span class="search-words">しまだ塾</span>　その3.…</p>
               </li>
               <li>
+                <h2 class="title">５月２０日にしたこと.doc</h2>
+                <div class="actions">
+                  <a href="./files/" class="open-btn">→ 場所を開く</a>
+                  <a href="./files/dummy.doc" class="dl-btn">→ ダウンロード</a>
+                </div>
+                <p class="update">更新：2014/05/20</p>
+                <ul class="tagcloud">
+                  <li><a href="tagcloud.html?tag=作業報告">作業報告</a></li>
+                </ul>
+                <p class="content">5/20　作業　1.<span class="search-words">しまだ塾</span>に関する作業（主にときめき…</p>
+              </li>
+              <li id="purpose">
                 <h2 class="title">Rubyアプリ開発ノート.doc</h2>
                 <div class="actions">
                   <a href="./files/" class="open-btn">→ 場所を開く</a>
@@ -116,23 +128,70 @@
                 </div>
                 <p class="update">更新：2014/04/05</p>
                 <ul class="tagcloud">
-                  <li><a href="tagcloud.html">しまだ塾</a></li>
-                  <li><a href="tagcloud.html">Ruby</a></li>
+                  <li><a href="tagcloud.html?tag=">しまだ塾</a></li>
+                  <li><a href="tagcloud.html?tag=">Ruby</a></li>
                 </ul>
-                <p class="content">Rubyアプリ開発ノート　アプリ開発案　1.楽しい開発を行う　2.仲良く開発を行う　3.いろいろ学…</p>
+                <p class="content">Rubyアプリ開発ノート　使用言語：Ruby ⇒※プログラミング言語Rubyについてのまとめは以下…</p>
               </li>
               <li>
-                <h2 class="title">Rubyアプリ開発ノート.doc</h2>
+                <h2 class="title">私が思う効率的な開発メモ.txt</h2>
                 <div class="actions">
                   <a href="./files/" class="open-btn">→ 場所を開く</a>
-                  <a href="./files/Rubyアプリ開発ノート.doc" class="dl-btn">→ ダウンロード</a>
+                  <a href="./files/dummy.doc" class="dl-btn">→ ダウンロード</a>
                 </div>
-                <p class="update">更新：2014/04/05</p>
+                <p class="update">更新：2014/03/24</p>
                 <ul class="tagcloud">
-                  <li><a href="tagcloud.html">しまだ塾</a></li>
-                  <li><a href="tagcloud.html">Ruby</a></li>
+                  <li><a href="tagcloud.html?tag=開発">開発</a></li>
                 </ul>
-                <p class="content">Rubyアプリ開発ノート　アプリ開発案　1.楽しい開発を行う　2.仲良く開発を行う　3.いろいろ学…</p>
+                <p class="content">私が思う効率的な開発メモ　楽しく開発するためには<span class="search-words">しまだ塾</span>をうまく活用しよう！…</p>
+              </li>
+              <li>
+                <h2 class="title">開発方法の実態.doc</h2>
+                <div class="actions">
+                  <a href="./files/" class="open-btn">→ 場所を開く</a>
+                  <a href="./files/dummy.doc" class="dl-btn">→ ダウンロード</a>
+                </div>
+                <p class="update">更新：2014/03/15</p>
+                <ul class="tagcloud">
+                  <li><a href="tagcloud.html?tag=開発">開発</a></li>
+                </ul>
+                <p class="content">開発方法のことを知るためにまとめたファイルです。…</p>
+              </li>
+              <li>
+                <h2 class="title">しまだ塾とは.txt</h2>
+                <div class="actions">
+                  <a href="./files/" class="open-btn">→ 場所を開く</a>
+                  <a href="./files/dummy.doc" class="dl-btn">→ ダウンロード</a>
+                </div>
+                <p class="update">更新：2014/03/09</p>
+                <ul class="tagcloud">
+                  <li><a href="tagcloud.html?tag=しまだ塾">しまだ塾</a></li>
+                </ul>
+                <p class="content">しまだ塾とは　1.楽しく開発できる　2.しらないことを学ぶためのきっかけになる　3.<span class="search-words">しまだ塾</span>…</p>
+              </li>
+              <li>
+                <h2 class="title">最近話題のHTML5について.xlsx</h2>
+                <div class="actions">
+                  <a href="./files/" class="open-btn">→ 場所を開く</a>
+                  <a href="./files/dummy.doc" class="dl-btn">→ ダウンロード</a>
+                </div>
+                <p class="update">更新：2014/01/28</p>
+                <ul class="tagcloud">
+                  <li><a href="tagcloud.html?tag=HTML5">HTML5</a></li>
+                </ul>
+                <p class="content">HTML5が最近話題になっています。　※<span class="search-words">しまだ塾</span>については…</p>
+              </li>
+              <li>
+                <h2 class="title">今年の計画.doc</h2>
+                <div class="actions">
+                  <a href="./files/" class="open-btn">→ 場所を開く</a>
+                  <a href="./files/dummy.doc" class="dl-btn">→ ダウンロード</a>
+                </div>
+                <p class="update">更新：2014/01/8</p>
+                <ul class="tagcloud">
+                  <li><a href="tagcloud.html?tag=しまだ塾">しまだ塾</a></li>
+                </ul>
+                <p class="content">今年（2014年）の計画　・C++について学ぶ　・<span class="search-words">しまだ塾</span>について…</p>
               </li>
             </ol>
           </article><!--/resultbox-->
@@ -159,7 +218,7 @@
           </nav><!--/paging-->
         </div><!--/main-column-->
         <div class="side-column">
-          さいどカラム<br>（ここに何置いたらいいでしょうか…）
+          さいどカラム<br>※仮置
         </div><!--/side-column-->
       </div><!--/main-->
       <footer class="footer">
@@ -173,6 +232,7 @@
         var $opclBtns = $('.opcl-tagcloud');
         $opclBtns.on('click', function(){
           $('#tagcloud').toggleClass('hidden');
+          return false;
         });
         
         //ページ上部にスムーススクロール
