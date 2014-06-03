@@ -1,22 +1,32 @@
 @charset "utf-8";
 
 /*カラーリング --------*/
-$clrBase: #fff;
-$clrMain: #888;
-$clrAccent: #eee;
-$clrHeader: #aaa;
-$clrFooter: #eee;
+$clrBase: #fdfdf0;
+$clrMain: #f19aa7;
+$clrMainLight: #f3f2da;
+$clrMainBorder: #edebb5;
+$clrAccent: #b36a76;
+$clrHeader: #f3f2da;
+$clrFooter: #f3f2da;
 $clrTextNormal: #444;
+$clrTextLight: #85846b;
 $clrTextWhite: #fff;
+$clrTextBlack: #222;
 $clrTextLinkNormal: #0070c0;
 $clrTextLinkWhite: #fff;
+$clrBackLinkDeep: #b36a76;
+$clrBackLinkLight: #f1f0d2;
 
-$clrBtnDeep: #444;
-$clrBtnDeepBD: #222;
-$clrBtnLight: #888;
-$clrBtnLightBD: #777;
+$clrBtnDeep: #9d5964;
+$clrBtnDeepBD: #9d5964;
+$clrBtnNormal: #b36a76;
+$clrBtnNormalBD: #9d5964;
+$clrBtnLight: #e07887;
+$clrBtnLightBD: #b36a76;
 $clrBtnAccent: #555;
 $clrBtnAccentBD: #333;
+
+$clrInputBack: #000;
 
 
 /*共通のタグ-------*/
@@ -131,10 +141,10 @@ input[type="button"]:hover {
     
     a {
       display: block;
-      color: #222;
+      color: $clrTextBlack;
       padding: 10px 15px;
       font-size: 0.8em;
-      background-color: #bbb;
+      background-color: $clrBackLinkDeep;
       border-top-left-radius: 0.4em;
       border-top-right-radius: 0.4em;
     }
@@ -155,7 +165,7 @@ input[type="button"]:hover {
 /*パンくずリスト--------*/
 
 .containner .main .breadcrumb {
-  background-color: #efefef;
+  background-color: $clrBackLinkLight;
   border-radius: 5px;
   padding: 5px 10px;
   margin-bottom: 15px;
@@ -221,7 +231,7 @@ input[type="button"]:hover {
     .freeword {
       position: relative;
       text-align: right;
-      background-color: #555;
+      background-color: $clrAccent;
       padding: 8px;
       margin: 5px 0;
       border-radius: 0.4em;
@@ -237,7 +247,7 @@ input[type="button"]:hover {
         color: $clrTextNormal;
         width: 100%;
         border-radius: 4px;
-        border-top: #bbb 2px solid;
+        border-top: $clrBtnDeepBD 2px solid;
       }
 
       [type="submit"] {
@@ -245,13 +255,13 @@ input[type="button"]:hover {
         right: 8px;
         top: 8px;
         border: none;
-        background-color: #777;
+        background-color: $clrBtnNormal;
         color: $clrTextWhite;
         font-size: 1em;
         padding: 5px 10px;
         border-top-right-radius: 3px;
         border-bottom-right-radius: 3px;
-        border-bottom: #444 2px solid;
+        border-bottom: $clrBtnNormalBD 2px solid;
         -webkit-appearance: none;
       }
     }
@@ -274,8 +284,8 @@ input[type="button"]:hover {
         text-decoration: none;
         
         &.selected {
-          background-color: #555;
-          border-top: 2px #222 solid;
+          background-color: $clrBtnDeep;
+          border-top: 2px $clrBtnDeepBD solid;
           border-bottom: none;
         }
         
@@ -326,8 +336,8 @@ input[type="button"]:hover {
       line-height: 1.1em;
       background-color: $clrBase;
       /*text-decoration: none;*/
-      border-top: 2px #fff solid;
-      color: #222;
+      border-top: 2px $clrBase solid;
+      color: $clrTextBlack;
       /*border-bottom: 1px #999 solid;*/
     }
   }
@@ -340,7 +350,7 @@ input[type="button"]:hover {
 }
 
 #tagcloud {
-  background-color: #777;
+  background-color: $clrBtnNormal;
   padding: 10px;
   border-radius: 5px;
 }
@@ -374,7 +384,7 @@ input[type="button"]:hover {
       padding: 30px 30px 0;
       margin-bottom: 20px;
       float: left;
-      color: #222;
+      color: $clrTextBlack;
       border-radius: 0.4em;
       
       a{
@@ -398,7 +408,7 @@ input[type="button"]:hover {
       }
       
       .freeword{
-        background-color: #333;
+        background-color: $clrBtnDeep;
         padding: 15px;
         margin: 10px 0;
         
@@ -467,25 +477,25 @@ input[type="button"]:hover {
       > .list > li {
         list-style: none;
         position: relative;
-        background-color: #f5f5f5;
+        background-color: $clrMainLight;
         padding: 15px;
         border-radius: 5px;
         margin-bottom: 15px;
-        border: 3px #ddd solid;
+        border: 3px $clrMainBorder solid;
         
         > .title {
           font-size: 1.2em;
           padding-right: 13em;
           padding-bottom: 10px;
           margin-bottom: 10px;
-          border-bottom: 1px dotted #ccc;
+          border-bottom: 1px dotted $clrMainBorder;
           
           &:before {
             content: "★";
             display: inline-block;
             padding-right: 5px;
             font-size: 1.4em;
-            color: #000;
+            color: $clrAccent;
           }
         }
         
@@ -493,15 +503,15 @@ input[type="button"]:hover {
           float: right;
           font-size: 0.8em;
           font-weight: bold;
-          color: #777;
+          color: $clrTextLight;
           margin-bottom: 10px;
         }
         
         .content {
           font-size: 0.9em;
           background-color: $clrBase;
-          border: 1px #e5e5e5 solid;
-          color: #666;
+          border: 1px $clrMainBorder solid;
+          color: $clrTextLight;
           border-radius: 5px;
           padding: 10px;
           margin-bottom: 10px;
@@ -538,7 +548,7 @@ input[type="button"]:hover {
     }
     
     .result-line {
-      border-bottom: #aaa dashed 1px;
+      border-bottom: $clrMainBorder dashed 1px;
       overflow: hidden;
       margin-bottom: 15px;
       line-height: 2.2em;
