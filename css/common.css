@@ -10,8 +10,12 @@ body {
 
 input {
   font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-  cursor: pointer;
   margin: 0; }
+
+input[type="submit"],
+input[type="button"],
+input[type="image"] {
+  cursor: pointer; }
 
 a {
   opacity: 1;

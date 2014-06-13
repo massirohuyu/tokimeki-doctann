@@ -31,7 +31,7 @@
         <div class="main-column">
           <div class="search">
             <article class="module">
-              <h2>フリーワード入力</h2>
+              <h2>フリーワード検索</h2>
               <form method="get" action="freeword.html" class="freeword">
                 <input type="text" value="" name="word" placeholder="ファイル名・単語を入力">
                 <input type="submit" value="検索">
@@ -71,6 +71,13 @@
                 <option value="">表示件数(10件)</option>
                 <option value="" selected>表示件数(20件)</option>
                 <option value="">表示件数(50件)</option>
+              </select>
+            </p>
+            <p class="order">
+              <select name="" title="表示順序">
+                <option value="" selected>関連が高い順</option>
+                <option value="">作成日順</option>
+                <option value="">更新日順</option>
               </select>
             </p>
           </div><!--/result-line-->
