@@ -472,26 +472,34 @@ input[type="button"]:hover {
       > .list > li {
         list-style: none;
         position: relative;
-        background-color: #f5f5f5;
+        background: #f5f5f5 url(../images/icon-file-text.png) 10px 5px no-repeat;
         padding: 15px;
         border-radius: 5px;
         margin-bottom: 15px;
         border: 3px #ddd solid;
         
+        &.word {
+          background-image: url(../images/icon-file-word.png);
+        }
+        &.excel {
+          background-image: url(../images/icon-file-excel.png);
+        }
+        
         > .title {
           font-size: 1.2em;
+          padding: 0 13em 10px 40px;
           padding-right: 13em;
           padding-bottom: 10px;
           margin-bottom: 10px;
           border-bottom: 1px dotted #ccc;
           
-          &:before {
-            content: "★";
+/*          &:before {
+            content: "■";
             display: inline-block;
             padding-right: 5px;
             font-size: 1.4em;
             color: #000;
-          }
+          }*/
         }
         
         .update {
@@ -510,6 +518,11 @@ input[type="button"]:hover {
           border-radius: 5px;
           padding: 10px;
           margin-bottom: 10px;
+          clear: both;
+        }
+        
+        strong.hit-word {
+          background-color: #f3c8c8;
         }
         
         .tagcloud a {

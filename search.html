@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>検索結果一覧 - ときめきDocTann</title>
+    <link rel="stylesheet" href="./css/html5reset-1.6.1.css" type='text/css' media='all'>
+    <link rel="stylesheet" href="./css/common.css" type='text/css' media='all'>
+    <script src="./js/respond.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="./js/html5shiv.min.js" type="text/javascript"></script>
+    <![endif]-->
+    <meta name="description" content="「ときめきDocTann」は社内の情報・ファイル共有サービスです。">
+    <meta name="keywords" content="ときめきDocTann, 情報, ファイル, 共有, 社内">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+    <script src="./js/search.js" type="text/javascript"></script>
+  </head>
+  <body id="search-list">
+    <div class="containner" id="page-top">
+      <header class="header">
+        <p class="title"><a href="./index.html">ときめきDocTann</a></p>
+<!--        ここは小さいロゴにする。-->
+      </header>
+      <div class="main">
+        <ul class="breadcrumb">
+          <li><a href="./index.html">トップ</a></li>
+          <li class="current">検索結果一覧</li>
+        </ul>
+        <h1 class="title">検索結果一覧 <span class="small">：<span class="search-words"></span><span class="search-tags"></span></span></h1>
+        <div class="main-column">
+          <div class="search">
+            <article class="module">
+              <h2>フリーワード検索</h2>
+              <form method="get" action="" class="freeword">
+                <input type="text" value="" name="word" placeholder="ファイル名・単語を入力">
+                <input type="hidden" value="" name="tag">
+                <input type="submit" value="検索">
+              </form>
+            </article>
+            <article class="module tags-selected">
+              <h2>選択しているタグ</h2>
+              <ul class="tagcloud">
+              </ul>
+              <a href="javascript:void(0);" class="opcl-tagcloud">▼ タグを選択する</a>
+            </article>
+            <article class="module hidden" id="tagcloud">
+              <h2 class="assistive-text">タグクラウド</h2>
+              <ul class="tagcloud">
+                <li><a href="?tag=HTML5" class="lank1">HTML5</a></li>
+                <li><a href="?tag=CSS3" class="lank2">CSS3</a></li>
+                <li><a href="?tag=ねこ" class="lank2">ねこ</a></li>
+                <li><a href="?tag=ときめきDocTann" class="lank4">ときめきDocTann</a></li>
+                <li><a href="?tag=Ruby" class="lank3">Ruby</a></li>
+                <li><a href="?tag=しまだ塾" class="lank1">しまだ塾</a></li>
+                <li><a href="?tag=HTML5" class="lank1">HTML5</a></li>
+                <li><a href="?tag=CSS3" class="lank2">CSS3</a></li>
+                <li><a href="?tag=ねこ" class="lank2">ねこ</a></li>
+                <li><a href="?tag=DocTann" class="lank4">DocTann</a></li>
+                <li><a href="?tag=OL" class="lank3">OL</a></li>
+                <li><a href="?tag=しまだ塾" class="lank1">しまだ塾</a></li>
+              </ul>
+            </article>
+          </div><!--/search-->
+          <div class="result-line">
+            <p class="hits">該当件数：<span class="value">213</span>件 
+              <span class="small">(1～20件を表示)</span></p>
+            <p class="display-num">
+              <select name="" title="表示件数">
+                <option value="">表示件数(5件)</option>
+                <option value="">表示件数(10件)</option>
+                <option value="" selected>表示件数(20件)</option>
+                <option value="">表示件数(50件)</option>
+              </select>
+            </p>
+            <p class="order">
+              <select name="" title="表示順序">
+                <option value="" selected>関連が高い順</option>
+                <option value="">作成日順</option>
+                <option value="">更新日順</option>
+              </select>
+            </p>
+          </div><!--/result-line-->
+          <nav class="paging">
+            <p class="prev">
+              <a href="">前のページ</a>
+            </p>
+            <p class="next">
+              <a href="">次のページ</a>
+            </p>
+            <p class="pages">
+              <span class="active">1</span>
+              <a href="">2</a>
+              <a href="">3</a>
+              <a href="">4</a>
+              <a href="">5</a>
+              <a href="">6</a>
+              <a href="">7</a>
+              <a href="">8</a>
+              <a href="">9</a>
+              <a href="">10</a>
+              <a href="">11～</a>
+            </p>
+          </nav><!--/paging-->
+          <article class="result-box">
+            <ol class="list">
+              <li class="word">
+                <h2 class="title">電子申請システムのまとめ.doc</h2>
+                <div class="actions">
+                  <a href="./files/" class="open-btn">→ 場所を開く</a>
+                  <a href="./files/dummy.doc" class="dl-btn">→ ダウンロード</a>
+                </div>
+                <p class="update">更新：2014/05/29</p>
+                <ul class="tagcloud">
+                  <li><a href="?tag=電子申請">電子申請</a></li>
+                </ul>
+                <p class="content">電子申請システムのまとめ　その1.電子申請とはなにか　その2.電子申請と<span class="search-words">しまだ塾</span>　その3.…</p>
+              </li>
+              <li class="word">
+                <h2 class="title">５月２０日にしたこと.doc</h2>
+                <div class="actions">
+                  <a href="./files/" class="open-btn">→ 場所を開く</a>
+                  <a href="./files/dummy.doc" class="dl-btn">→ ダウンロード</a>
+                </div>
+                <p class="update">更新：2014/05/20</p>
+                <ul class="tagcloud">
+                </ul>
+                <p class="content">5/20　作業　1.<span class="search-words">しまだ塾</span>に関する作業（主にときめき…</p>
+              </li>
+              <li class="word" id="purpose">
+                <h2 class="title">Rubyアプリ開発ノート.doc</h2>
+                <div class="actions">
+                  <a href="./files/" class="open-btn">→ 場所を開く</a>
+                  <a href="./files/Rubyアプリ開発ノート.doc" class="dl-btn">→ ダウンロード</a>
+                </div>
+                <p class="update">更新：2014/04/05</p>
+                <ul class="tagcloud">
+                  <li><a href="">しまだ塾</a></li>
+                  <li><a href="">Ruby</a></li>
+                </ul>
+                <p class="content">Rubyアプリ開発ノート　使用言語：Ruby ⇒※プログラミング言語Rubyについてのまとめは以下…</p>
+              </li>
+              <li>
+                <h2 class="title">私が思う効率的な開発メモ.txt</h2>
+                <div class="actions">
+                  <a href="./files/" class="open-btn">→ 場所を開く</a>
+                  <a href="./files/dummy.doc" class="dl-btn">→ ダウンロード</a>
+                </div>
+                <p class="update">更新：2014/03/24</p>
+                <ul class="tagcloud">
+                  <li><a href="?tag=開発">開発</a></li>
+                </ul>
+                <p class="content">私が思う効率的な開発メモ　楽しく開発するためには<span class="search-words">しまだ塾</span>をうまく活用しよう！…</p>
+              </li>
+              <li class="word">
+                <h2 class="title">開発方法の実態.doc</h2>
+                <div class="actions">
+                  <a href="./files/" class="open-btn">→ 場所を開く</a>
+                  <a href="./files/dummy.doc" class="dl-btn">→ ダウンロード</a>
+                </div>
+                <p class="update">更新：2014/03/15</p>
+                <ul class="tagcloud">
+                  <li><a href="?tag=開発">開発</a></li>
+                </ul>
+                <p class="content">開発方法のことを知るためにまとめたファイルです。<span class="search-words">しまだ塾</span>…</p>
+              </li>
+              <li>
+                <h2 class="title">しまだ塾とは.txt</h2>
+                <div class="actions">
+                  <a href="./files/" class="open-btn">→ 場所を開く</a>
+                  <a href="./files/dummy.doc" class="dl-btn">→ ダウンロード</a>
+                </div>
+                <p class="update">更新：2014/03/09</p>
+                <ul class="tagcloud">
+                  <li><a href="?tag=しまだ塾">しまだ塾</a></li>
+                </ul>
+                <p class="content">しまだ塾とは　1.楽しく開発できる　2.しらないことを学ぶためのきっかけになる　3.<span class="search-words">しまだ塾</span>…</p>
+              </li>
+              <li class="excel">
+                <h2 class="title">最近話題のHTML5について.xlsx</h2>
+                <div class="actions">
+                  <a href="./files/" class="open-btn">→ 場所を開く</a>
+                  <a href="./files/dummy.doc" class="dl-btn">→ ダウンロード</a>
+                </div>
+                <p class="update">更新：2014/01/28</p>
+                <ul class="tagcloud">
+                  <li><a href="?tag=HTML5">HTML5</a></li>
+                </ul>
+                <p class="content">HTML5が最近話題になっています。　※<span class="search-words">しまだ塾</span>については…</p>
+              </li>
+              <li class="word">
+                <h2 class="title">今年の計画.doc</h2>
+                <div class="actions">
+                  <a href="./files/" class="open-btn">→ 場所を開く</a>
+                  <a href="./files/dummy.doc" class="dl-btn">→ ダウンロード</a>
+                </div>
+                <p class="update">更新：2014/01/8</p>
+                <ul class="tagcloud">
+                </ul>
+                <p class="content">今年（2014年）の計画　・Rubyについて学ぶ　・<span class="search-words">しまだ塾</span>について…</p>
+              </li>
+            </ol>
+          </article><!--/resultbox-->
+          <nav class="paging">
+            <p class="prev">
+              <a href="">前のページ</a>
+            </p>
+            <p class="next">
+              <a href="">次のページ</a>
+            </p>
+            <p class="pages">
+              <span class="active">1</span>
+              <a href="">2</a>
+              <a href="">3</a>
+              <a href="">4</a>
+              <a href="">5</a>
+              <a href="">6</a>
+              <a href="">7</a>
+              <a href="">8</a>
+              <a href="">9</a>
+              <a href="">10</a>
+              <a href="">11～</a>
+            </p>
+          </nav><!--/paging-->
+        </div><!--/main-column-->
+        <div class="side-column">
+          さいどカラム<br>※仮置
+        </div><!--/side-column-->
+      </div><!--/main-->
+      <footer class="footer">
+        <p class="copyright">© Copyright しまだ塾</p>
+      </footer>
+      <div class="page-top-btn"><a href="#page-top">ページ上部へ</a></div>
+    </div><!--/containner-->
+    <script type="text/javascript">
+      (function(){
+        //タグクラウドの開閉
+        var $opclBtns = $('.opcl-tagcloud');
+        $opclBtns.on('click', function(){
+          $('#tagcloud').toggleClass('hidden');
+          return false;
+        });
+        
+        //ページ上部にスムーススクロール
+        var $scrollBtns = $('.page-top-btn').find('a');
+        $scrollBtns.on('click', function(){
+          var speed = 300;
+          var href= $(this).attr("href");
+          var target = $(href == "#" || href == "" ? 'html' : href);
+          var position = target.offset().top;
+          $("html, body").animate({scrollTop:position}, speed, "swing");
+          return false;
+        });
+      })();
+    </script>
+  </body>
+</html>
