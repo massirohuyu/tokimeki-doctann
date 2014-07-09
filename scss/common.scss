@@ -67,8 +67,8 @@ input[type="button"]:hover {
   overflow: hidden;
   
   .header {
-    height: 30px;
-    padding: 20px;
+    height: 40px;
+    padding: 15px;
     background-color: $clrHeader;
     
     > .title {
@@ -76,7 +76,7 @@ input[type="button"]:hover {
       width: 960px;
       font-weight: bold;
       font-size: 25px;
-      line-height: 30px;
+      line-height: 40px;
       color: $clrTextWhite;
       
       a {
@@ -368,6 +368,7 @@ input[type="button"]:hover {
       hgroup{
         font-size: 1.8em;
         line-height: 1.8em;
+        letter-spacing: 1px;
       }
     }
     
