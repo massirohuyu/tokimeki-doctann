@@ -37,9 +37,7 @@ $(document).ready(function() {
   
   //ワード内に該当文字列がない場合は目的のファイルを非表示
   var $purpose = $('#purpose').hide();
-  if(paramArray.word.match(/開発|Ruby|Ｒｕｂｙ|しまだ塾|アプリ/i))
-    $purpose.show();
-  if(paramArray.tag.match(/Ruby|しまだ塾/))
+  if((paramArray.word.match(/開発|Ruby|Ｒｕｂｙ|しまだ塾|アプリ/i) || paramArray.word === '') && (paramArray.tag.match(/Ruby|しまだ塾/) || paramArray.tag === ''))
     $purpose.show();
   
   //pagingの各リンクにパラメータ設定
@@ -78,7 +76,7 @@ $(document).ready(function() {
     });
   
   //該当文字列をハイライト
-  $('.result-box .list > li').find('.title, .content')
+  $('.result-box .list > li').find('.title, .content, .folder')
           .each(function() {
             var $this = $(this),
             thisHtml = $this.text(),

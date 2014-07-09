@@ -39,7 +39,10 @@
               <input type="text" value="" name="word" placeholder="ファイル名・単語を入力">
               <input type="submit" value="検索">
             </form>
-            <p class="tagcloud-all-btn"><a href="jaavscript:void(0);" title="→ 詳しく設定する">→ 詳しく設定する</a></p>
+            <div class="hidden" id="freeword-config">
+              ※文書の「更新日」「作成日」「作成者」「ファイルの種類」を設定したい。
+            </div>
+            <p class="btn-collapse"><a href="jaavscript:void(0);" title="→ 詳しく設定する" data-target="#freeword-config">→ 詳しく設定する</a></p>
           </article>
           <article class="module">
             <hgroup>
@@ -74,7 +77,7 @@
               <li><a href="search.html?tag=CMS" class="lank1">CMS</a></li>
               <li><a href="search.html?tag=BBQ" class="lank3">BBQ</a></li>
             </ul>
-            <p class="tagcloud-all-btn"><a href="jaavscript:void(0);" title="→ すべてのタグを表示する">→ すべてのタグを表示する</a></p>
+            <p class="btn-collapse"><a href="jaavscript:void(0);" title="→ すべてのタグを表示する" data-target="#tagcloud">→ すべてのタグを表示する</a></p>
           </article>
         </div><!--/search-->
       </div><!--/main-->
@@ -86,19 +89,19 @@
     <script type="text/javascript">
       (function(){
         //タグクラウドの開閉と文言変更
-        var $tagcloudAllBtn = $('.tagcloud-all-btn');
-        $tagcloudAllBtn.on('click', function(){
+        var $btnCollapse = $('.btn-collapse');
+        $btnCollapse.on('click', function(){
           var $btn = $(this),
-          $btnA = $btn.find('a');
+          $btnA = $btn.find('a'),
+          dataTarget = $btnA.data('target');
           
           if($btn.hasClass('opened')) {
             $btnA.text($btnA[0].title);
           } else {
             $btnA.text('→ 非表示にする');
           }
-
           $btn.toggleClass('opened');
-          $('#tagcloud').toggleClass('hidden');
+          $(dataTarget).toggleClass('hidden');
           
           return false;
         });
